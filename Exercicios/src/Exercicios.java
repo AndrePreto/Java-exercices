@@ -1,10 +1,17 @@
+import java.time.DateTimeException;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.temporal.TemporalAdjusters;
 import java.util.Scanner;
 
 public class Exercicios {
 
 	public static void main(String[] args) {
 		//System.out.println(FirstLetterToUpperCase("hi, my name is André"));
-		RussianMultiplication();
+		//RussianMultiplication();
+		//DaystonextSunday();
+		Palindromo();
+		
 	}
 	
 	public static String FirstLetterToUpperCase(String text){
@@ -65,6 +72,56 @@ public class Exercicios {
 				}
 			}
 		System.out.println(z);
+		}
+	}
+	
+	public static void DaystonextSunday(){
+		
+		
+		while(true){
+			try{
+				System.out.println("Introduza o ano");
+				int ano = ValidateInt();
+				System.out.println("Introduza o mês");
+				int mês = ValidateInt();
+				System.out.println("Introduza o dia");
+				int dia = ValidateInt();
+				LocalDate DiaEscolhido = LocalDate.of(ano, mês, dia);
+				System.out.println("Dia escolhido -> " + DiaEscolhido);
+				
+				DayOfWeek DiadaSemana = DiaEscolhido.getDayOfWeek();
+				int Dia = DiadaSemana.getValue();
+				
+				if (Dia == 7){
+					System.out.println("Dia da Semana -> " + DiadaSemana);
+					
+				}else{
+					System.out.println("Dia da Semana -> " + DiadaSemana);
+					System.out.println((7-Dia) + " dia(s) para o próximo domingo");
+					System.out.println(DiaEscolhido.with(TemporalAdjusters.next(DayOfWeek.SUNDAY)));
+				}
+			}catch(DateTimeException E){
+				System.out.println("A data introduzida não é válida");
+			}
+		}
+	}
+	
+	public static void Palindromo(){
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Introduza uma palavra");
+		String text = scanner.nextLine();
+		String textinverted = "";
+		
+		for(int i= text.length()-1; i >= 0; i--){
+			textinverted += text.charAt(i);
+		}
+		System.out.println(textinverted);
+		
+		if(text == textinverted){
+			System.out.println("É um palindromo");
+		}else{
+			System.out.println("Não é um palindromo");
 		}
 	}
 }
