@@ -11,7 +11,6 @@ public class Exercicios {
 		//RussianMultiplication();
 		//DaystonextSunday();
 		//Palindromo();
-		BuzzFizz();
 		
 	}
 	
@@ -127,20 +126,16 @@ public class Exercicios {
 	}
 	
 	public static void BuzzFizz(){
-		System.out.println("Introduza o x");
 		int x = ValidateInt();
-		System.out.println("Introduza o y");
 		int y = ValidateInt();
 		
 		for(int i=x; i<=y; i++){
-			if (i%3==0 && i%5==0){
-				System.out.println(i +" FizzBuzz");
+			if (i%3==0){
+				System.out.println(i +"Fizz");
 			}else if (i%5==0){
-				System.out.println(i + " Buzz");
-			}else if (i%3==0){
-				System.out.println(i + " Fizz");
-			}else{
-				System.out.println(i);
+				System.out.println(i + "Buzz");
+			}else if (i%3==0 && i%5==0){
+				System.out.println(i + "FizzBuzz");
 			}
 		}
 	}

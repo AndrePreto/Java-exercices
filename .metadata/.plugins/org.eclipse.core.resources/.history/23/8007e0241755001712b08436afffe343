@@ -139,8 +139,6 @@ public class Exercicios {
 				System.out.println(i + " Buzz");
 			}else if (i%3==0){
 				System.out.println(i + " Fizz");
-			}else{
-				System.out.println(i);
 			}
 		}
 	}

@@ -10,8 +10,7 @@ public class Exercicios {
 		//System.out.println(FirstLetterToUpperCase("hi, my name is André"));
 		//RussianMultiplication();
 		//DaystonextSunday();
-		//Palindromo();
-		BuzzFizz();
+		Palindromo();
 		
 	}
 	
@@ -123,25 +122,6 @@ public class Exercicios {
 			System.out.println("É um palindromo");
 		}else{
 			System.out.println("Não é um palindromo");
-		}
-	}
-	
-	public static void BuzzFizz(){
-		System.out.println("Introduza o x");
-		int x = ValidateInt();
-		System.out.println("Introduza o y");
-		int y = ValidateInt();
-		
-		for(int i=x; i<=y; i++){
-			if (i%3==0 && i%5==0){
-				System.out.println(i +" FizzBuzz");
-			}else if (i%5==0){
-				System.out.println(i + " Buzz");
-			}else if (i%3==0){
-				System.out.println(i + " Fizz");
-			}else{
-				System.out.println(i);
-			}
 		}
 	}
 }

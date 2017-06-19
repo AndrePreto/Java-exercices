@@ -134,13 +134,11 @@ public class Exercicios {
 		
 		for(int i=x; i<=y; i++){
 			if (i%3==0 && i%5==0){
-				System.out.println(i +" FizzBuzz");
+				System.out.println(i +"FizzBuzz");
 			}else if (i%5==0){
-				System.out.println(i + " Buzz");
+				System.out.println(i + "Buzz");
 			}else if (i%3==0){
-				System.out.println(i + " Fizz");
-			}else{
-				System.out.println(i);
+				System.out.println(i + "Fizz");
 			}
 		}
 	}
